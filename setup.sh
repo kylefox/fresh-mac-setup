@@ -3,6 +3,17 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
+# Preflight: check for Full Disk Access (needed to write Safari preferences).
+# There's no API to check this directly, so we try to read a protected plist.
+# If the read fails, Terminal doesn't have Full Disk Access.
+if ! plutil -lint /Library/Preferences/com.apple.TimeMachine.plist >/dev/null 2>&1; then
+  echo "Error: Terminal needs Full Disk Access."
+  echo "Opening System Settings..."
+  open "x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles"
+  echo "Grant Full Disk Access to Terminal, then re-run this script."
+  exit 1
+fi
+
 echo "==> Installing Xcode Command Line Tools"
 "$SCRIPT_DIR/scripts/xcode.sh"
 
