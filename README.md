@@ -5,7 +5,6 @@ Scripts to automate setting up a new Mac.
 ## Usage
 
 ```bash
-xcode-select --install
 git clone https://github.com/kylefox/fresh-mac-setup.git
 cd fresh-mac-setup
 ./setup.sh
