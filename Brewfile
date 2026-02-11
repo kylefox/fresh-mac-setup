@@ -7,4 +7,4 @@ brew "mas"
 cask "1password"
 
 # Mac App Store
-# mas "Fantastical", id: 975937182
+mas "Wipr", id: 1662217862

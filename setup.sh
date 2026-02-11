@@ -10,11 +10,17 @@ echo "==> Installing Homebrew"
 "$SCRIPT_DIR/scripts/homebrew.sh"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+echo "==> Sign into the Mac App Store, then press Enter to continue."
+read -r
+
 echo "==> Installing packages"
 "$SCRIPT_DIR/scripts/packages.sh"
 
 echo "==> Configuring Dock"
 "$SCRIPT_DIR/scripts/macos/dock.sh"
+
+echo "==> Configuring Safari"
+"$SCRIPT_DIR/scripts/macos/safari.sh"
 
 echo "==> Setting fish as default shell"
 "$SCRIPT_DIR/scripts/fish.sh"
