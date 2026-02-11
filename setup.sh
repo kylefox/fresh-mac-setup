@@ -3,9 +3,6 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-echo "==> Updating macOS"
-"$SCRIPT_DIR/scripts/softwareupdate.sh"
-
 echo "==> Installing Xcode Command Line Tools"
 "$SCRIPT_DIR/scripts/xcode.sh"
 
