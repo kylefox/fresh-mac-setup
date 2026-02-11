@@ -16,6 +16,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 echo "==> Installing packages"
 "$SCRIPT_DIR/scripts/packages.sh"
 
+echo "==> Configuring Dock"
+"$SCRIPT_DIR/scripts/macos/dock.sh"
+
 echo "==> Setting fish as default shell"
 "$SCRIPT_DIR/scripts/fish.sh"
 

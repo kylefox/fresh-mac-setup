@@ -23,3 +23,9 @@ This will:
 1. Install Xcode Command Line Tools
 2. Install Homebrew
 3. Install packages and apps from the `Brewfile`
+
+## macOS Defaults
+
+System preferences are set via `defaults write` commands in `scripts/macos/`.
+
+[macos-defaults.com](https://macos-defaults.com) is a great reference for discovering available settings.
