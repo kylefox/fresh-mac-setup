@@ -11,6 +11,7 @@ echo "==> Installing Xcode Command Line Tools"
 
 echo "==> Installing Homebrew"
 "$SCRIPT_DIR/scripts/homebrew.sh"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "==> Installing packages"
 "$SCRIPT_DIR/scripts/packages.sh"
