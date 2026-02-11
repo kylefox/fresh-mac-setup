@@ -1,4 +1,5 @@
 # CLI tools
+brew "fish"
 brew "git"
 brew "mas"
 

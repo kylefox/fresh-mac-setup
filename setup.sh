@@ -15,4 +15,7 @@ echo "==> Installing Homebrew"
 echo "==> Installing packages"
 "$SCRIPT_DIR/scripts/packages.sh"
 
+echo "==> Setting fish as default shell"
+"$SCRIPT_DIR/scripts/fish.sh"
+
 echo "Done!"
